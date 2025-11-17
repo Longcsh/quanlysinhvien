@@ -1,0 +1,275 @@
+/* =================== RESET & FONT =================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #f4f7fb 0%, #e8eef7 100%);
+  color: #1e2a38;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* =================== SIDEBAR =================== */
+.sidebar {
+  width: 230px;
+  background: #002b5b;
+  color: #eaf1ff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #f4c542;
+  text-align: center;
+}
+
+.sidebar a {
+  display: block;
+  color: #eaf1ff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: background 0.3s ease;
+}
+
+.sidebar a:hover {
+  background: #004080;
+}
+
+.sidebar .logout {
+  background: #c0392b;
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.sidebar .logout:hover {
+  background: #a93226;
+}
+
+/* =================== MAIN CONTENT =================== */
+.main-content {
+  margin-left: 230px;
+  padding: 40px;
+  width: calc(100% - 230px);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: fadeIn 0.4s ease;
+}
+
+/* =================== HEADER =================== */
+.header {
+  background-color: #002d62;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* =================== DASHBOARD =================== */
+.gv-dashboard {
+  text-align: center;
+  padding: 50px 20px 80px;
+}
+
+.gv-dashboard h2 {
+  color: #003366;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.gv-dashboard p {
+  font-size: 16px;
+  color: #444;
+  margin-top: 5px;
+}
+
+.gv-dashboard hr {
+  border: none;
+  height: 1px;
+  background-color: #d9e1ec;
+  margin: 25px auto;
+  width: 80%;
+}
+
+/* =================== STATISTICS CARDS =================== */
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 15px;
+  padding: 28px 38px;
+  width: 240px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* =================== TABLE STYLE (Học phần, SV, điểm) =================== */
+.table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #002b5b;
+  color: #fff;
+}
+
+th, td {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 15px;
+}
+
+tbody tr:nth-child(even) {
+  background: #f3f7ff;
+}
+tbody tr:hover {
+  background: #e6efff;
+}
+
+/* =================== BUTTONS (Sinh viên / Nhập điểm / In) =================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 5px;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn i {
+  font-size: 14px;
+}
+
+.btn-view {
+  background: #007bff;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+}
+.btn-view:hover {
+  background: #0056b3;
+  box-shadow: 0 3px 6px rgba(0, 123, 255, 0.4);
+}
+
+.btn-grade {
+  background: #ffc107;
+  color: #222;
+  box-shadow: 0 2px 4px rgba(255, 193, 7, 0.3);
+}
+.btn-grade:hover {
+  background: #e0a800;
+  box-shadow: 0 3px 6px rgba(255, 193, 7, 0.4);
+}
+
+.btn-print {
+  background: #17a2b8;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.25s;
+}
+.btn-print:hover {
+  background: #138496;
+}
+
+/* =================== FOOTER =================== */
+footer {
+  background: #002d62;
+  color: #eaf1ff;
+  text-align: center;
+  padding: 18px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  border-top: 2px solid #004080;
+  margin-top: auto;
+
+  /* ✅ Fix tràn sidebar */
+  margin-left: 230px;
+  width: calc(100% - 230px);
+}
+
+/* =================== ANIMATIONS =================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =================== RESPONSIVE =================== */
+@media (max-width: 900px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .stat-card {
+    width: 80%;
+  }
+  footer {
+    margin-left: 0;
+    width: 100%;
+  }
+}
